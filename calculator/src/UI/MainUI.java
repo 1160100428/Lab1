@@ -9,7 +9,9 @@ import javax.swing.JFrame;
 import javax.swing.JTextField;
 
 import Core.DataBase;
-
+/**
+* this is branch B2
+*/
 public class MainUI extends JFrame implements ActionListener{
 
 	/**
@@ -31,21 +33,21 @@ public class MainUI extends JFrame implements ActionListener{
 	
 	JTextField jTextField;
 	JButton[][] jButton = new JButton[6][4];
-	String[][] buttonString = {{"%","¡Ì","x^2","1/x"},{"C","¦Ð","<-","/"},{"7","8","9","X"},
+	String[][] buttonString = {{"%","âˆš","x^2","1/x"},{"C","Ï€","<-","/"},{"7","8","9","X"},
 			{"4","5","6","-"},{"1","2","3","+"},{"+/-","0",".","="}};
 	
 	public void start() {
 		
 		this.setLayout(null);
-		//ÎÄ±¾¿ò£¬²»¿ÉÐÞ¸Ä£¬ÓÒ¶ÔÆë£¬ÑùÊ½´ýÐÞ¸Ä
+		//æ–‡æœ¬æ¡†ï¼Œä¸å¯ä¿®æ”¹ï¼Œå³å¯¹é½ï¼Œæ ·å¼å¾…ä¿®æ”¹
 		jTextField = new JTextField(dataBase.getMainText());
 		jTextField.setEditable(false);
-		jTextField.setFont(new Font("ËÎÌå", Font.BOLD, 25));
+		jTextField.setFont(new Font("å®‹ä½“", Font.BOLD, 25));
 		jTextField.setHorizontalAlignment(JTextField.RIGHT);
 		jTextField.setBounds(space, y, textWidth, textHeight);
 		this.add(jTextField);
 		
-		//°´Å¥£¬ÑùÊ½´ýÐÞ¸Ä£¬Ê¹ÓÃsetIconº¯Êý¿ÉÉèÖÃ°´Å¥Í¼Æ¬Íê³É×Ô¶¨Òå°´Å¥
+		//æŒ‰é’®ï¼Œæ ·å¼å¾…ä¿®æ”¹ï¼Œä½¿ç”¨setIconå‡½æ•°å¯è®¾ç½®æŒ‰é’®å›¾ç‰‡å®Œæˆè‡ªå®šä¹‰æŒ‰é’®
 		for(int i = 0; i < 6; i++)
 			for(int j = 0; j < 4; j++) {
 				jButton[i][j] = new JButton(buttonString[i][j]);
@@ -62,7 +64,7 @@ public class MainUI extends JFrame implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-//		String[][] buttonString = {{"%","¡Ì","x^2","1/x"},{"C","¦Ð","<-","/"},{"7","8","9","X"},
+//		String[][] buttonString = {{"%","âˆš","x^2","1/x"},{"C","Ï€","<-","/"},{"7","8","9","X"},
 //				{"4","5","6","-"},{"1","2","3","+"},{"+/-","0",".","="}};
 		String temp = arg0.getActionCommand();
 		if(temp.length()==1&&temp.charAt(0)<58&&temp.charAt(0)>48) {
@@ -90,7 +92,7 @@ public class MainUI extends JFrame implements ActionListener{
 			case "=":
 				dataBase.equal();
 				break;
-			case "¦Ð":
+			case "Ï€":
 				dataBase.pai();
 				break;
 			default:
