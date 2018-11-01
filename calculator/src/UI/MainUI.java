@@ -1,4 +1,4 @@
-package UI;
+﻿package UI;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -10,7 +10,7 @@ import javax.swing.JTextField;
 
 import Core.DataBase;
 /**
-* this is branch B2
+* this is branch B4
 */
 public class MainUI extends JFrame implements ActionListener{
 

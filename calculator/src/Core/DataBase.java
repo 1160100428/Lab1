@@ -10,7 +10,7 @@ package Core;
  * 完善了答案的保存，便于再次升级开发
  */
 import java.util.ArrayList;
-
+4
 public class DataBase {
 
 	//主屏幕显示
