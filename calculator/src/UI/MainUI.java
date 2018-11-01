@@ -10,7 +10,7 @@ import javax.swing.JTextField;
 
 import Core.DataBase;
 /**
-* this is branch C4
+* this is branch B4
 */
 public class MainUI extends JFrame implements ActionListener{
 
