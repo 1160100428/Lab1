@@ -8,6 +8,7 @@ package Core;
  * 优化了除零错误的判断
  * 异常处理更加人性化
  * 完善了答案的保存，便于再次升级开发
+ * this is branch C4
  */
 import java.util.ArrayList;
 
